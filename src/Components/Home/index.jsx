@@ -7,7 +7,7 @@ import Modal from 'react-bootstrap/Modal'
 import { BsListCheck } from 'react-icons/bs';
 import { BsList } from 'react-icons/bs';
 import { AiOutlineDelete } from 'react-icons/ai';
-import { CreateTask, GetTasks, UpdateTask, DeleteTask, DeleteTasks } from '../../Utilities/ApiRequests'
+import { CreateTask, GetTasks, UpdateTask, DeleteTasks } from '../../Utilities/ApiRequests'
 import './index.css'
 
 
@@ -26,7 +26,6 @@ const Home = (props) => {
         const res = await GetTasks()
         if (!res || !res?.data) { return }
 
-        const sorted = res.data.sort((a, b) => a.name.localeCompare(b.name));
         setTasks(res.data)
     }
 
@@ -47,7 +46,7 @@ const Home = (props) => {
     }
 
     const handleDeleteAllTasks = async () => {
-        const res = await DeleteTasks()
+        await DeleteTasks()
         await getTasks()
         setShowModal(false)
     }
