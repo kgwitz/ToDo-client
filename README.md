@@ -11,14 +11,13 @@ Make sure you have the following software installed on your machine:
 Node.js: Download and install Node.js if you haven't already.
 ## Installation
 Clone the repository to your local machine using the following command:
-### `git clone <https://github.com/kgwitz/ToDoList.git>`
+### `git clone <https://github.com/kgwitz/ToDo-client.git>`
 
 Install the required dependencies by running the following command:
 ### `npm install`
 
 ## Environment
 Create a .env file in the root directory and provide the neccessary configurations: 
-### `REACT_APP_FRONT_END_URL='http://localhost:3000'`
 ### `REACT_APP_BACK_END_URL='http://localhost:3001'`
 
 ## Usage
@@ -33,3 +32,5 @@ To build the production-ready optimized version of the application, use the foll
 ### `npm run build`
 
 This will create a build directory containing the optimized and minified version of the application code.
+
+***Please note: The original project included both the server-side and client-side code. There were many more commits than the single commit that can be seen in this repository.
